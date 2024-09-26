@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color:#414141;color: white;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+           
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu7HWqVZENwhpjhM2xgGAFqR_uSu-hIxhPOQ&s" id="flower1" alt="Italian Trulli"></li>
+            <li><img src="https://www.bing.com/th?id=OIP.tNs-jyDsaZtmzdoaNrSuSwHaK9&w=150&h=222&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" id="girl" alt="Girl in a jacket"></li>
+            <li><img src="https://th.bing.com/th/id/OIP.IclisUz3xzagkFDOeayEHgHaL4?w=120&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7" id="china" alt="Flowers in Chania"> </li>
+            <li><img src="https://th.bing.com/th/id/OIP.UQ6HfJasDbNt7Sob6Ki_rQHaFQ?w=211&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"  id="korea" alt="Flowers in korea"></li>  
+           
+            <li><a style="color: white;" href="https://google.com" id="google">Google</a></li>
+
+        </ul>
+    </div>
+    <script>
+        // what is main to read in events
+
+        //types , timespan  , defaultPrevented , target ,toElement  ,srcElement ,currentTarget,
+        //interview clientX,clientY ,screenY
+        //altKey ,ctrlkey ,shiftkey ,keycode
+    
+
+        // document.getElementById('images').addEventListener('click',function(e){
+        //     console.log("you clicked the Image ul");
+        // },false)
+        // document.getElementById('china').addEventListener('click',function(e){
+        //     console.log("clicked inside ul");
+        //     e.stopPropagation();
+        // },false)
+
+        // document.getElementById('google').addEventListener('click',function(e){
+
+           
+        //     e.preventDefault();
+        //     console.log("google clicked");
+        // },false)
+
+        document.querySelector('#images').addEventListener("click",function(e){
+
+            console.log(e.target.tagName);
+
+            if(e.target.tagName === "IMG"){
+                console.log(e.target.id);
+            const removeIt = e.target.parentNode;
+           removeIt.remove();
+            }
+
+        //    removeIt.parentNode.removeChild()
+        })
+    </script>
+  
+</body>
+
+</html>
