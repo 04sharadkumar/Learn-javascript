@@ -5,7 +5,6 @@ const promiseOne = new  Promise(function(resolve,reject){
 
         console.log("working")
 
-        
     },2000);
 
     resolve();
